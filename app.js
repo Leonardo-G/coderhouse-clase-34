@@ -9,6 +9,8 @@ app.set("view engine", "pug")
 
 app.use("/", require("./routes/view"));
 
-app.listen(8000, () => {
-    console.log("El servidor iniciado en", 8000)
+const port = process.env.PORT || 8000
+
+app.listen(port, () => {
+    console.log("El servidor iniciado en", port)
 })
