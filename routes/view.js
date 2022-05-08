@@ -4,6 +4,10 @@ const { loggerArchivoInfo, loggerArchivoWarn, loggerArchivoError } = require("..
 
 const router = Router();
 
+router.get("/", ( req, res ) => {
+    res.send("Inicio Heroku")
+})
+
 router.get("/info-comp", compression(),( req, res ) => {
     loggerArchivoInfo.info("Peticion realizada en /info-comp");
     const string = "Hola";
