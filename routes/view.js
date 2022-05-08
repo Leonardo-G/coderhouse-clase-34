@@ -5,7 +5,7 @@ const { loggerArchivoInfo, loggerArchivoWarn, loggerArchivoError } = require("..
 const router = Router();
 
 router.get("/", ( req, res ) => {
-    res.send("<h1>Inicio Heroku</h1>");
+    res.render("inicio");
 })
 
 router.get("/info-comp", compression(),( req, res ) => {
